@@ -1,11 +1,3 @@
 # Vayne
-pipeline {
-	agent {
-		any
-	}
-	stages {
-		stage('Source') { // 获取代码
-			
-		}
-	}
-}
+
+[![Build Status](https://travis-ci.com/conan17/Vayne.svg?branch=master)](https://travis-ci.com/conan17/Vayne)
