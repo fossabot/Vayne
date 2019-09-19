@@ -10,3 +10,8 @@ env:
     - GO111MODULE=on
 
 script: make test
+
+after_success:
+  - go get github.com/schrej/godacov
+  - go test -coverprofile=coverage.out
+  - godacov -t $CODACY_TOKEN -r ./coverage.out -c $TRAVIS_COMMIT
