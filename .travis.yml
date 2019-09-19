@@ -12,7 +12,5 @@ env:
 script: make test
 
 after_success:
-  - go get -u github.com/haya14busa/goverage
-  - goverage -v -coverprofile=coverage.out ./...
   - go get github.com/schrej/godacov
-  - godacov -t $CODACY_TOKEN -r coverage.out -c $TRAVIS_COMMIT
+  - godacov -t $CODACY_TOKEN -r ./coverage.out -c $TRAVIS_COMMIT
