@@ -6,3 +6,6 @@ vet:
 
 build: vet
 	GO111MODULE=on go build -o ${PWD}/bin/vayne ./
+
+test:
+	GO111MODULE=on go test -v ./...
