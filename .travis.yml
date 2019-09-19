@@ -9,4 +9,4 @@ env:
   global:
     - GO111MODULE=on
 
-script: make build
+script: make test
