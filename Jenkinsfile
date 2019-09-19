@@ -1,10 +1,10 @@
 pipeline {
-	agent {
-		any
-	}
+	agent "any"
 	stages {
-		stage('Source') { // 获取代码
-			
+		stage('Build') {
+			steps{
+				sh "make build"
+			}
 		}
 	}
 }
